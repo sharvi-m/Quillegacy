@@ -1,46 +1,35 @@
 # Quillegacy Website
 
-A simple two-file website for **Quillegacy**, the senior memory booklet initiative.
+A simple multi-page website for **Quillegacy**, the senior memory booklet initiative.
 
 ## Files
 
-| File         | What it does                                          |
-| ------------ | ----------------------------------------------------- |
-| `index.html` | All the text and content of the site.                 |
-| `style.css`  | All the colors, fonts, and layout.                    |
-| `README.md`  | This file. Instructions for editing.                  |
+| File / Folder      | What it does                                          |
+| ------------------ | ----------------------------------------------------- |
+| `index.html`       | Landing page (hero + tiles to the inner pages).       |
+| `about.html`       | About Us page.                                        |
+| `services.html`    | Our Service page (with the four values).              |
+| `impact.html`      | Impact page.                                          |
+| `team.html`        | Who We Are page.                                      |
+| `style.css`        | Shared colors, fonts, and layout for every page.      |
+| `images/`          | Logo and any other images.                            |
+| `README.md`        | This file. Instructions for editing.                  |
 
-That's it — just two files to maintain.
+Every page shares the same nav bar and footer, so the site feels like one cohesive thing.
 
 ## How to view the site
 
 Double-click `index.html` and it will open in your web browser.
-No installation, no build step, no server needed.
+Use the nav bar at the top to move between pages.
 
-## How to edit the text
+No installation, no build step, no server.
 
-Open `index.html` in any text editor (TextEdit, VS Code, Notepad, etc.).
+## How to edit text on a page
 
-Look for the section you want to change — each one is clearly marked with a comment like:
-
-```html
-<!-- ===== ABOUT US ===== -->
-```
-
-Just change the words between the `<p>` (paragraph) or `<h2>` (heading) tags.
-Save the file and refresh your browser.
-
-### Example
-
-To change the mission statement, find this in `index.html`:
-
-```html
-<p class="lead">
-  Our mission is to help seniors pass their memories...
-</p>
-```
-
-Change the text inside, save, and refresh.
+1. Open the page file you want to edit (e.g. `services.html`) in any text editor.
+2. Look for the section you want to change — each one is clearly marked with a comment like `<!-- ===== … ===== -->`.
+3. Change the words between the `<p>` (paragraph) or `<h2>` (heading) tags.
+4. Save the file and refresh your browser.
 
 ## How to change the colors
 
@@ -60,22 +49,65 @@ Open `style.css` and look at the top:
 Change any color code (the `#xxxxxx` value) and the whole site updates.
 Tip: use [coolors.co](https://coolors.co/) to pick new colors.
 
+## About the font
+
+The site uses **Outfit**, a free Google Font that closely matches Canva's "Now" font.
+"Now" itself is a paid commercial font and is not available for free web embedding,
+so Outfit is the closest free, web-safe alternative.
+
+**If you want to use the real "Now" font on the website:**
+
+1. Buy/download the `.ttf` or `.woff2` files (e.g. from Adobe Fonts or the foundry).
+2. Put the font files in a new folder called `fonts/`.
+3. In `style.css`, replace the Outfit setup with:
+
+   ```css
+   @font-face {
+     font-family: 'Now';
+     src: url('fonts/Now-Regular.woff2') format('woff2');
+     font-weight: 400;
+     font-style: normal;
+   }
+   /* repeat @font-face for each weight you have */
+
+   :root {
+     --font: 'Now', sans-serif;
+   }
+   ```
+
+4. Remove the `<link href="…Outfit…">` line from the `<head>` of each HTML page.
+
+## How to change the logo
+
+The logo lives at `images/quillegacy-logo.png`.
+It has a **transparent background** so it sits cleanly on any page color.
+
+To swap it for a new version, just replace that file (keep the same filename).
+
+## How to add a new page
+
+1. Copy any existing inner page (e.g. `about.html`) and rename it (e.g. `gallery.html`).
+2. Change the title, heading, and content for the new page.
+3. In the new page's `<nav>` block, move `aria-current="page"` to the new page's link.
+4. In **every other** HTML file, add a new link to the `<nav>` block:
+   `<a href="gallery.html">Gallery</a>`
+5. Save and refresh.
+
 ## How to put it online (free options)
 
-The easiest free hosting options:
-
-1. **GitHub Pages** — push these files to a GitHub repo, enable Pages in settings.
+1. **GitHub Pages** — push these files to a GitHub repo, enable Pages in Settings.
 2. **Netlify Drop** — drag the folder onto [app.netlify.com/drop](https://app.netlify.com/drop).
 3. **Vercel** — connect a GitHub repo at [vercel.com](https://vercel.com).
 
 All three are free and take less than 5 minutes.
 
-## Sections on the site
+## Pages on the site
 
-1. **Hero** — the opening line and mission tagline
-2. **About Us** — mission statement and project description
-3. **Impact** — three cards: for Families, for Seniors, for Future Generations
-4. **Who We Are** — the team of 8th graders
+1. **Home** (`index.html`) — opening tagline + tiles linking to each inner page.
+2. **About Us** (`about.html`) — mission and project description.
+3. **Our Service** (`services.html`) — how the interview becomes a booklet, plus our four values.
+4. **Impact** (`impact.html`) — what this work means for families, seniors, and future generations.
+5. **Who We Are** (`team.html`) — the team of three 8th graders.
 
 ---
 

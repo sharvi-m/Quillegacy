@@ -8,104 +8,71 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
+  <!-- ===== NAVIGATION (same on every page) ===== -->
   <header class="nav">
     <div class="nav-inner">
-      <a href="#top" class="logo">Quillegacy</a>
+      <a href="index.html" class="logo" aria-label="Quillegacy home">
+        <img src="images/quillegacy-logo.png" alt="Quillegacy" />
+      </a>
       <nav>
-        <a href="#about">About Us</a>
-        <a href="#impact">Impact</a>
-        <a href="#team">Who We Are</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Our Service</a>
+        <a href="impact.html">Impact</a>
+        <a href="team.html">Who We Are</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section id="top" class="hero">
+  <!-- ===== LANDING HERO ===== -->
+  <section class="hero">
     <div class="hero-content">
       <h1>Every life is a story worth keeping.</h1>
       <p class="tagline">
         Quillegacy helps seniors pass their memories and wisdom down to their families
         and future generations through carefully curated, personalized memory booklets.
       </p>
-      <a href="#about" class="btn">Learn more</a>
-    </div>
-  </section>
-
-  <!-- ===== ABOUT US ===== -->
-  <section id="about" class="section section-light">
-    <div class="container">
-      <h2>About Us</h2>
-      <p class="lead">
-        Our mission is to help seniors pass their memories and wisdom down to their
-        families and future generations through a carefully curated and personalized
-        memory booklet.
-      </p>
-      <p>
-        The first step to making the memory booklet is to interview the seniors about
-        their best memories and the lessons they have learned throughout their lives.
-        We preserve the stories that would otherwise be forgotten. Through carefully
-        customized and thought-out designs, experiences from the past come to life
-        once more.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== IMPACT ===== -->
-  <section id="impact" class="section section-warm">
-    <div class="container">
-      <h2>Impact</h2>
-      <p class="lead">
-        A memory booklet is more than a keepsake — it's a bridge between generations.
-      </p>
-
-      <div class="impact-grid">
-        <div class="impact-card">
-          <h3>For Families</h3>
-          <p>
-            Loved ones gain a lasting record of the people, places, and lessons that
-            shaped their family's story — something to read, share, and pass down.
-          </p>
-        </div>
-        <div class="impact-card">
-          <h3>For Seniors</h3>
-          <p>
-            Reminiscing brings joy and comfort. Our interview sessions give seniors
-            a meaningful space to revisit and celebrate the moments that matter most.
-          </p>
-        </div>
-        <div class="impact-card">
-          <h3>For Future Generations</h3>
-          <p>
-            Stories that would otherwise be forgotten are preserved — so grandchildren
-            and great-grandchildren can know the voices of the people who came before.
-          </p>
-        </div>
+      <div class="hero-actions">
+        <a href="about.html" class="btn">Learn more</a>
+        <a href="services.html" class="btn btn-ghost">Our service</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHO WE ARE ===== -->
-  <section id="team" class="section section-light">
+  <!-- ===== EXPLORE TILES ===== -->
+  <section class="section section-light">
     <div class="container">
-      <h2>Who We Are</h2>
-      <p class="lead">
-        We are three 8th graders who believe every senior carries a story worth
-        remembering — and that no one's memories should be lost to time.
-      </p>
-      <p>
-        Quillegacy began as a small idea between friends and grew into a project
-        we care deeply about. We're learning, listening, and building something
-        meaningful — one interview, one booklet, and one life story at a time.
-      </p>
+      <h2 class="center">Explore</h2>
+      <div class="tile-grid">
+        <a href="about.html" class="tile">
+          <h3>About Us</h3>
+          <p>Our mission and the story behind the booklets.</p>
+          <span class="tile-arrow">&rarr;</span>
+        </a>
+        <a href="services.html" class="tile">
+          <h3>Our Service</h3>
+          <p>How an interview becomes a handcrafted booklet.</p>
+          <span class="tile-arrow">&rarr;</span>
+        </a>
+        <a href="impact.html" class="tile">
+          <h3>Impact</h3>
+          <p>What this work means for seniors, families, and the future.</p>
+          <span class="tile-arrow">&rarr;</span>
+        </a>
+        <a href="team.html" class="tile">
+          <h3>Who We Are</h3>
+          <p>Meet the three 8th graders behind Quillegacy.</p>
+          <span class="tile-arrow">&rarr;</span>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== FOOTER (same on every page) ===== -->
   <footer class="footer">
     <div class="container">
       <p class="footer-brand">Quillegacy</p>
