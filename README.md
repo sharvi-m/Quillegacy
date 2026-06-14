@@ -9,8 +9,10 @@ A simple multi-page website for **Quillegacy**, the senior memory booklet initia
 | `index.html`       | Landing page (hero + tiles to the inner pages).       |
 | `about.html`       | About Us page.                                        |
 | `services.html`    | Our Service page (with the four values).              |
+| `product.html`     | Our Product page (booklet image + interview questions). |
 | `impact.html`      | Impact page.                                          |
 | `team.html`        | Who We Are page.                                      |
+| `contact.html`     | Contact Us page (email).                              |
 | `style.css`        | Shared colors, fonts, and layout for every page.      |
 | `images/`          | Logo and any other images.                            |
 | `README.md`        | This file. Instructions for editing.                  |
@@ -45,6 +47,9 @@ Open `style.css` and look at the top:
   --accent-dk:  #6e4429;   /* hover color */
 }
 ```
+
+Change any color code (the `#xxxxxx` value) and the whole site updates.
+Tip: use [coolors.co](https://coolors.co/) to pick new colors.
 
 Change any color code (the `#xxxxxx` value) and the whole site updates.
 Tip: use [coolors.co](https://coolors.co/) to pick new colors.
@@ -106,8 +111,22 @@ All three are free and take less than 5 minutes.
 1. **Home** (`index.html`) — opening tagline + tiles linking to each inner page.
 2. **About Us** (`about.html`) — mission and project description.
 3. **Our Service** (`services.html`) — how the interview becomes a booklet, plus our four values.
-4. **Impact** (`impact.html`) — what this work means for families, seniors, and future generations.
-5. **Who We Are** (`team.html`) — the team of three 8th graders.
+4. **Our Product** (`product.html`) — what the finished booklet looks like and the full list of interview questions.
+5. **Impact** (`impact.html`) — what this work means for families, seniors, and future generations.
+6. **Who We Are** (`team.html`) — the team of three 8th graders.
+7. **Contact Us** (`contact.html`) — email address for getting in touch.
+
+## How to change the contact email
+
+Open `contact.html`. Look for these two lines:
+
+```html
+<a href="mailto:info@quillegacy.com" class="contact-email">
+  info@quillegacy.com
+</a>
+```
+
+Replace **both** occurrences of `info@quillegacy.com` — the `mailto:` link and the displayed text. Save and refresh.
 
 ---
 
