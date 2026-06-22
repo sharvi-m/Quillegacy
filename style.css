@@ -334,18 +334,32 @@ a:hover { color: var(--accent-dk); }
   display: flex;
   justify-content: center;
   align-self: center;
-  max-width: 620px;
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 12px 28px rgba(60, 40, 20, 0.12);
-  overflow: visible;
+  overflow: hidden;
+}
+
+.product-image--wide {
+  max-width: 620px;
+}
+
+.product-image--portrait {
+  max-width: 420px;
 }
 
 .product-image img {
   width: 100%;
-  max-width: 620px;
   height: auto;
   display: block;
+}
+
+.product-image--wide img {
+  max-width: 620px;
+}
+
+.product-image--portrait img {
+  max-width: 420px;
 }
 
 .product-text {
